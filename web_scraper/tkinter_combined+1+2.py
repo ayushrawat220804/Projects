@@ -93,8 +93,6 @@ def scrape_website():
                 status_label.config(text=f"Failed to retrieve the page. Status code: {response.status_code}")
         except requests.exceptions.RequestException as e:
             status_label.config(text=f"Request failed: {e}")
-
-    # Start the scraping in a new thread
     threading.Thread(target=run_scraping, daemon=True).start()
 
 # GUI setup
