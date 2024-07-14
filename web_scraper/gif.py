@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-import csv
+import csv // Modified
 import os
 
 # Step 1: Send an HTTP request to the website
