@@ -14,7 +14,7 @@ class Game:
         
     def gameLoop(self):
         while True:
-            for event in pgm.event.get():
+            for event in pgm.event.get(): // Modified
                 if event.type == pgm.QUIT:
                     pgm.quit()
                     sys.exit()
