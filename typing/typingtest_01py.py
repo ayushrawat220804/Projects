@@ -52,7 +52,6 @@ class TypingSpeedTest:
         self.btn_stop.grid(row=3, column=1, sticky="nsew")
         
         self.btn_new_text = tk.Button(root, text="New Text", command=self.new_text)
-        self.btn_new_text.grid(row=3, column=2, sticky="nsew")
         
         self.label_speed = tk.Label(root, text="Your typing speed is 0 WPM")
         self.label_speed.grid(row=4, column=0, columnspan=3, sticky="nsew")
