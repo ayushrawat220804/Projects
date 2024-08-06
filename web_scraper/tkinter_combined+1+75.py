@@ -102,8 +102,6 @@ def open_folder():
 
 # Open external links
 def open_link(url):
-    webbrowser.open(url)
-
 # GUI setup
 root = tk.Tk()
 root.title("Web Scraper")
