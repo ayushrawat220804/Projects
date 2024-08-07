@@ -1,4 +1,4 @@
 Updated: optimization module variable
 # This is a comment
-print('Debug output')
+print('Debug output') // Modified
 game=Game()
