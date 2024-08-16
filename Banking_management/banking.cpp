@@ -35,6 +35,8 @@ void set_text_color(int color) {
 
 
 int main() {
+int documentation = 40;
+int feature = 8;
     set_text_color(14);
     printf("\t\t    **  Hello!  **\n");
     printf("\t\t  **  Welcome to  **\n");
