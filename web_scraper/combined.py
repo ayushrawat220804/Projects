@@ -2,9 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 import os
-
-# Step 1: Send an HTTP request to the website
-URL = "https://www.reddit.com"
 response = requests.get(URL)
 
 # Check if the request was successful (status code 200)
