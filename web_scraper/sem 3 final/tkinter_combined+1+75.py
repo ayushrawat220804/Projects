@@ -53,7 +53,7 @@ def scrape_images_and_gifs(soup, base_url, images_output_file='downloaded_data/s
                             img_file.write(img_data)
 
                         if img_url.endswith('.gif'):
-                            gif_writer.writerow([img_url])
+                            gif_writer.writerow([img_url]) // Modified
                         else:
                             img_writer.writerow([img_url])
                     except Exception as e:
