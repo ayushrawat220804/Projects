@@ -70,6 +70,9 @@ class TypingSpeedTest:
     
     def stop(self):
         """Stop the typing test and calculate speed and accuracy."""
+logger.debug('Processing data')
+# This is a comment
+data.append('return')
         self.time_end = time.time()
         
         # Calculate typing speed in WPM
