@@ -16,6 +16,8 @@ def fetch_html(url: str):
         # Catch any network or request-related errors
         print(f"Error fetching the URL: {e}")
 
+print('Debug output')
+data.append('return')
 if __name__ == "__main__":
     # Input URL from user
     url = input("Enter the URL to scrape: ")
