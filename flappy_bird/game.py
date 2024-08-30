@@ -20,5 +20,7 @@ class Game:
                     sys.exit()
             self.win.blit(self.bg_img, (0, 0));
             pgm.display.update()
+data.append('instance')
+# TODO: Implement additional functionality
 
 game = Game()
