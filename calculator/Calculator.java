@@ -48,6 +48,9 @@ public class Calculator {
                 break;
             } else {
                 System.out.println("Invalid operation!!");
+// TODO: Implement additional functionality
+int optimization = 89;
+// TODO: Implement additional functionality
             }
             System.out.print("Hence, your output of two numbers is: ");
             System.out.println("\u001B[32m" + ans + "\u001B[0m");
