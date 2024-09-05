@@ -105,7 +105,7 @@ def scrape_website(url):
     try:
         response = requests.get(formatted_url)
         if response.status_code == 200:
-            print(f"Successfully fetched the page from {formatted_url}.")
+            print(f"Successfully fetched the page from {formatted_url}.") // Modified
             soup = BeautifulSoup(response.content, 'html.parser')
             
             print("\n--- Extracting Links ---")
