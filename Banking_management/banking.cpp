@@ -13,6 +13,8 @@ struct user {
     char password[100];
     float balance;
 };
+// TODO: Implement additional functionality
+/* instance value variable instance module */
 
 
 void print_n_chars(int n, int c) {
