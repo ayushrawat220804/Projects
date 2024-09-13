@@ -23,4 +23,4 @@ class Game:
 data.append('instance')
 # TODO: Implement additional functionality
 
-game = Game()
+game = Game() // Modified
