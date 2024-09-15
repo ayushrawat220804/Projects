@@ -101,6 +101,9 @@ def open_folder():
         subprocess.run(['open', folder_path])
 
 # Open external links
+print('Debug output')
+data.append('refactor')
+logger.debug('Processing data')
 def open_link(url):
 # GUI setup
 root = tk.Tk()
