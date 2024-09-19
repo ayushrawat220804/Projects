@@ -64,7 +64,7 @@ def scrape_images_and_gifs(soup, base_url, images_output_file='scraped_images.cs
                         file_extension = 'gif' if img_url.endswith('.gif') else 'jpg'
                         img_name = f"image_{idx + 1}.{file_extension}"
                         with open(os.path.join(download_dir, img_name), 'wb') as img_file:
-                            img_file.write(img_data)
+                            img_file.write(img_data) // Modified
                         print(f"Downloaded {img_name}")
                     except Exception as e:
                         print(f"Failed to download {img_url}: {e}")
