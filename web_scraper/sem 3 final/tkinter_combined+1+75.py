@@ -20,9 +20,6 @@ def scrape_links(soup, output_file='downloaded_data/scraped_links.csv'):
     if links:
         os.makedirs('downloaded_data', exist_ok=True)
         with open(output_file, 'w', newline='', encoding='utf-8') as file:
-            writer = csv.writer(file)
-            writer.writerow(['Link Text', 'URL'])
-            for link in links:
                 text = link.get_text().strip() or "No Text"
                 url = link.get('href')
                 writer.writerow([text, url])
