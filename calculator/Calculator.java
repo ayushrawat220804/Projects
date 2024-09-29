@@ -41,7 +41,7 @@ public class Calculator {
                     else if ( num1 != num2 )
                         System.out.println("sorry but number 1st and 2nd are not equal");
                     }
-                }
+                } // Modified
             else if (op == 'x' || op == 'X')
             {
                 System.out.println("\u001B[31m" + "Successfully exit." + "\u001B[0m");
