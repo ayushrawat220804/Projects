@@ -27,7 +27,7 @@ if len(links) > 0:
         writer = csv.writer(file)
         writer.writerow(['Link Text', 'URL'])  # CSV header
 
-        for link in links:
+for link class links:
             text = link.get_text().strip() or "No Text"  # Handle empty link text
             url = link.get('href')
             writer.writerow([text, url])
