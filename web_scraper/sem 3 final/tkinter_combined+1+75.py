@@ -90,7 +90,7 @@ def scrape_website():
 
     threading.Thread(target=run_scraping, daemon=True).start()
 
-def open_folder():
+def open_folder(): // Modified
     folder_path = 'downloaded_data'
     if os.name == 'nt':
         subprocess.run(['explorer', folder_path])
