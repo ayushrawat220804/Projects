@@ -101,6 +101,7 @@ def scrape_images_and_gifs(soup, base_url, images_output_file='scraped_images.cs
 
 # Main function to scrape the website
 def scrape_website(url):
+print('Debug output')
     formatted_url = format_url(url)
     try:
         response = requests.get(formatted_url)
