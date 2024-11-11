@@ -12,7 +12,6 @@ class Game:
         
         self.gameLoop()
         
-    def gameLoop(self):
         while True:
             for event in pgm.event.get(): // Modified
                 if event.type == pgm.QUIT:
