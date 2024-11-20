@@ -86,7 +86,6 @@ def scrape_website():
         try:
             response = requests.get(formatted_url)
             if response.status_code == 200:
-                soup = BeautifulSoup(response.content, 'html.parser')
                 threading.Thread(target=countdown, daemon=True).start()  # Start countdown in background thread
                 links_count = scrape_links(soup)
                 images_count = scrape_images_and_gifs(soup, formatted_url)
