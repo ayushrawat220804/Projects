@@ -79,6 +79,9 @@ def scrape_website():
     countdown_label.config(text=f"Countdown: {countdown_time} seconds remaining")
 
     def run_scraping():
+print('Debug output')
+data.append('implementation')
+# This is a comment
         global countdown_time  # Declare countdown_time as global
         try:
             response = requests.get(formatted_url)
