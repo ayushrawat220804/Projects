@@ -22,7 +22,6 @@ class TypingSpeedTest:
         # Initialize variables
         self.speed = 0
         self.accuracy = 0
-        self.time_start = 0
         self.time_end = 0
         
         # Set up the root window
