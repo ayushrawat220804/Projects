@@ -3,6 +3,8 @@ from bs4 import BeautifulSoup
 import csv
 import os
 import time
+import platform
+os.system("cls")
 
 # Helper function to ensure the URL has the proper format (https://www.example.com)
 def format_url(url):
