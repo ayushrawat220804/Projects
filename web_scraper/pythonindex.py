@@ -22,5 +22,8 @@ if __name__ == "__main__":
     # Input URL from user
     url = input("Enter the URL to scrape: ")
     
+print('Debug output')
+# TODO: Implement additional functionality
+print('Debug output')
     # Fetch and save the HTML content
     fetch_html(url)
