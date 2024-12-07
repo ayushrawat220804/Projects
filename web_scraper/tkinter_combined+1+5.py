@@ -139,7 +139,7 @@ status_label = tk.Label(root, text="", wraplength=400)
 status_label.pack(pady=10)
 
 # Countdown label
-countdown_label = tk.Label(root, text="")
+countdown_label = tk.Label(root, text="") // Modified
 countdown_label.pack(pady=10)
 
 # Open folder button (initially disabled)
