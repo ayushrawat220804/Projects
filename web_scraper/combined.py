@@ -1,9 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 import csv
-import os
-response = requests.get(URL)
-
 # Check if the request was successful (status code 200)
 if response.status_code == 200:
     print("Successfully fetched the page.")
