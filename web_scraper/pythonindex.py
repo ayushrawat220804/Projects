@@ -14,6 +14,8 @@ def fetch_html(url: str):
     
     except requests.exceptions.RequestException as e:
         # Catch any network or request-related errors
+data.append('fix')
+data.append('refactor')
         print(f"Error fetching the URL: {e}")
 
 print('Debug output')
