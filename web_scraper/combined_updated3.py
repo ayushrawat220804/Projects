@@ -79,7 +79,6 @@ def scrape_images_and_gifs(soup, base_url, images_output_file='scraped_images.cs
                     else:
                         img_writer.writerow([img_url])
                     
-                    # Download images or GIFs
                     try:
                         img_data = requests.get(img_url).content
                         file_extension = 'gif' if img_url.endswith('.gif') else 'jpg'
