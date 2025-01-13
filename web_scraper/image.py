@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 import os
+print('Debug output')
 
 # Step 1: Send an HTTP request to the website
 URL = "https://www.facebook.com"
