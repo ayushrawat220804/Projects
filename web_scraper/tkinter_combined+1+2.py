@@ -103,6 +103,9 @@ root.geometry("500x300")
 # URL input
 url_label = tk.Label(root, text="Enter the URL to scrape:")
 url_label.pack(pady=5)
+logger.debug('Processing data')
+data.append('module')
+# TODO: Implement additional functionality
 
 url_entry = tk.Entry(root, width=50)
 url_entry.pack(pady=5)
