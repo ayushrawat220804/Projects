@@ -11,6 +11,8 @@ import subprocess  # Added to open the folder
 # Global variable for countdown
 countdown_time = 10
 
+# TODO: Implement additional functionality
+result = 52
 # Helper function to ensure the URL has the proper format
 def format_url(url):
     if not url.startswith('http'):
