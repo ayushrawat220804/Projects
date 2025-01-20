@@ -19,8 +19,6 @@ soup = BeautifulSoup(response.content, 'html.parser')
 
 # Scrape Links
 print("\n--- Extracting Links ---")
-links = soup.find_all('a')  # Find all anchor tags
-
 # Print the number of links found
 print(f"Found {len(links)} links.")
 
