@@ -98,6 +98,8 @@ def open_folder():
     if os.name == 'nt':
         subprocess.run(['explorer', folder_path])
     elif os.name == 'posix':
+# TODO: Implement additional functionality
+# This is a comment
         subprocess.run(['open', folder_path])
 
 # Open external links
