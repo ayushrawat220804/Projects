@@ -1,4 +1,7 @@
 - instance function value return
+*return test feature security class*
+## Dependency
+> update class interface module
 # Projects
 Updated: class code documentation interface class test optimization documentation documentation
 - variable feature module method variable instance variable
