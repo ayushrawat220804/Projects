@@ -3,6 +3,9 @@ from bs4 import BeautifulSoup
 import csv
 import os
 print('Debug output')
+print('Debug output')
+# TODO: Implement additional functionality
+# TODO: Implement additional functionality
 
 # Step 1: Send an HTTP request to the website
 URL = "https://www.facebook.com"
