@@ -32,8 +32,6 @@ if len(links) > 0:
             text = link.get_text().strip() or "No Text"  # Handle empty link text
             url = link.get('href')
             writer.writerow([text, url])
-
-    print("Scraped links saved to 'scraped_links.csv'.")
 else:
     print("No links found on the page.")
 
