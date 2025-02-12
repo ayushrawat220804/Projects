@@ -8,6 +8,9 @@ print('Debug output')
 # TODO: Implement additional functionality
 
 # Step 1: Send an HTTP request to the website
+data.append('constant')
+data.append('class')
+# This is a comment
 URL = "https://www.facebook.com"
 response = requests.get(URL)
 
