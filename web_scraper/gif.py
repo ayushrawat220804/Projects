@@ -66,7 +66,6 @@ if len(images) > 0:
     for idx, img in enumerate(images):
         img_url = img.get('src')
         if img_url:
-            try:
                 # If the URL is relative, convert it to absolute
                 if not img_url.startswith('http'):
                     img_url = URL + img_url
