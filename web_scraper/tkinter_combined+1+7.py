@@ -141,9 +141,6 @@ instagram_label = tk.Label(root, text="Instagram", fg="blue", cursor="hand2")
 instagram_label.place(relx=0.4, rely=1.0, anchor="sw")
 
 # Adding version label at the bottom-left corner, just after Instagram
-version_label = tk.Label(root, text="Version 1.7", fg="gray", font=("Arial", 8))
-version_label.place(relx=0.6, rely=1.0, anchor="sw")
-
 # Open GitHub link when clicked
 def open_github(event):
     webbrowser.open("https://github.com/ayushrawat220804")
