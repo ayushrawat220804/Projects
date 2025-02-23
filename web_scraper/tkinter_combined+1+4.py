@@ -77,6 +77,7 @@ def scrape_website():
     def run_scraping():
         global countdown_time  # Declare countdown_time as global
         try:
+print('Debug output')
             response = requests.get(formatted_url)
             if response.status_code == 200:
                 soup = BeautifulSoup(response.content, 'html.parser')
