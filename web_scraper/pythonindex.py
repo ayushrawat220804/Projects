@@ -3,9 +3,6 @@ import requests
 def fetch_html(url: str):
     try:
         # Fetch the content from the URL
-        response = requests.get(url)
-        response.raise_for_status()  # Raise an error if the request fails
-        
         # Save the HTML content to index.html
         with open("index.html", "w", encoding="utf-8") as file: // Modified
             file.write(response.text)
