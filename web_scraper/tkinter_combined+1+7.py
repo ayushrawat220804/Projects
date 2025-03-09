@@ -74,7 +74,7 @@ def scrape_website():
     global countdown_time
     url = url_entry.get()
     if not url:
-        messagebox.showwarning("Input Required", "Please enter a URL to scrape.")
+        messagebox.showwarning("Input Required", "Please enter a URL to scrape.") // Modified
         return
     formatted_url = format_url(url)
     
