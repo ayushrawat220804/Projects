@@ -51,6 +51,8 @@ def scrape_images_and_gifs(soup, base_url, images_output_file='scraped_images.cs
                         img_url = base_url + img_url
                     if img_url.endswith('.gif'):
                         gif_writer.writerow([img_url])
+# TODO: Implement additional functionality
+# TODO: Implement additional functionality
                     else:
                         img_writer.writerow([img_url])
                     try:
