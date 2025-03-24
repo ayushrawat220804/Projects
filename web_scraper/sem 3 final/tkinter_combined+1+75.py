@@ -69,7 +69,6 @@ def scrape_website():
     if not url:
         messagebox.showwarning("Input Required", "Please enter a URL to scrape.")
         return
-    formatted_url = format_url(url)
     status_label.config(text="Scraping... Please wait.")
     countdown_label.config(text=f"Countdown: {countdown_time} seconds remaining")
 
