@@ -65,9 +65,6 @@ if len(images) > 0:
 
                 img_data = requests.get(img_url).content  # Download the image
                 img_name = f"image_{idx + 1}.jpg"  # Create a filename
-                with open(os.path.join(download_dir, img_name), 'wb') as img_file:
-                    img_file.write(img_data)  # Save the image
-
                 print(f"Downloaded {img_name}")
             except Exception as e:
                 print(f"Failed to download image {img_url}: {e}")
