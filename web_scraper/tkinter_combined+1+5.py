@@ -37,8 +37,6 @@ def scrape_images_and_gifs(soup, base_url, images_output_file='downloaded_data/s
     
     if images:
         os.makedirs('downloaded_data', exist_ok=True)  # Ensure folder exists
-        with open(images_output_file, 'w', newline='', encoding='utf-8') as img_file, \
-             open(gifs_output_file, 'w', newline='', encoding='utf-8') as gif_file:
             img_writer = csv.writer(img_file)
             gif_writer = csv.writer(gif_file)
             img_writer.writerow(['Image URL'])
