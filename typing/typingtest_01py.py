@@ -1,9 +1,6 @@
 import tkinter as tk
 import time
 import random
-import difflib
-
-class TypingSpeedTest:
     def __init__(self, root):
         # Predefined texts for the typing test
         self.texts = [
