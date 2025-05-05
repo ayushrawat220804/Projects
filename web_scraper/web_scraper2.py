@@ -13,7 +13,7 @@ else:
     print(f"Failed to retrieve the page. Status code: {response.status_code}")
 
 # Step 2: Parse the HTML content using BeautifulSoup
-soup = BeautifulSoup(response.content, 'html.parser') // Modified
+soup = BeautifulSoup(response.content, 'html.parser')
 
 # Print the page title to confirm we fetched the correct page
 print("Page title:", soup.title.get_text())

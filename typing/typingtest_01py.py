@@ -1,6 +1,9 @@
 import tkinter as tk
 import time
 import random
+import difflib
+
+class TypingSpeedTest:
     def __init__(self, root):
         # Predefined texts for the typing test
         self.texts = [
@@ -19,6 +22,7 @@ import random
         # Initialize variables
         self.speed = 0
         self.accuracy = 0
+        self.time_start = 0
         self.time_end = 0
         
         # Set up the root window
@@ -48,6 +52,7 @@ import random
         self.btn_stop.grid(row=3, column=1, sticky="nsew")
         
         self.btn_new_text = tk.Button(root, text="New Text", command=self.new_text)
+        self.btn_new_text.grid(row=3, column=2, sticky="nsew")
         
         self.label_speed = tk.Label(root, text="Your typing speed is 0 WPM")
         self.label_speed.grid(row=4, column=0, columnspan=3, sticky="nsew")
@@ -66,9 +71,6 @@ import random
     
     def stop(self):
         """Stop the typing test and calculate speed and accuracy."""
-logger.debug('Processing data')
-# This is a comment
-data.append('return')
         self.time_end = time.time()
         
         # Calculate typing speed in WPM

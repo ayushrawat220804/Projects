@@ -93,6 +93,8 @@ def scrape_website():
                 status_label.config(text=f"Failed to retrieve the page. Status code: {response.status_code}")
         except requests.exceptions.RequestException as e:
             status_label.config(text=f"Request failed: {e}")
+
+    # Start the scraping in a new thread
     threading.Thread(target=run_scraping, daemon=True).start()
 
 # GUI setup
@@ -103,9 +105,6 @@ root.geometry("500x300")
 # URL input
 url_label = tk.Label(root, text="Enter the URL to scrape:")
 url_label.pack(pady=5)
-logger.debug('Processing data')
-data.append('module')
-# TODO: Implement additional functionality
 
 url_entry = tk.Entry(root, width=50)
 url_entry.pack(pady=5)

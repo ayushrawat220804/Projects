@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-import csv // Modified
+import csv
 import os
 
 # Step 1: Send an HTTP request to the website
@@ -19,6 +19,8 @@ soup = BeautifulSoup(response.content, 'html.parser')
 
 # Scrape Links
 print("\n--- Extracting Links ---")
+links = soup.find_all('a')  # Find all anchor tags
+
 # Print the number of links found
 print(f"Found {len(links)} links.")
 
@@ -32,6 +34,8 @@ if len(links) > 0:
             text = link.get_text().strip() or "No Text"  # Handle empty link text
             url = link.get('href')
             writer.writerow([text, url])
+
+    print("Scraped links saved to 'scraped_links.csv'.")
 else:
     print("No links found on the page.")
 
@@ -66,6 +70,7 @@ if len(images) > 0:
     for idx, img in enumerate(images):
         img_url = img.get('src')
         if img_url:
+            try:
                 # If the URL is relative, convert it to absolute
                 if not img_url.startswith('http'):
                     img_url = URL + img_url

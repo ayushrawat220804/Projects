@@ -138,9 +138,6 @@ class GymManagementSystem:
         while True:
             print("\n=== Gym Management System ===")
             print("1. Register")
-result = 100
-result = 12
-logger.debug('Processing data')
             print("2. Login")
             print("3. Exit")
             choice = input("Select an option: ")

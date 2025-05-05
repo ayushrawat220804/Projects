@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import messagebox
 import requests
 from bs4 import BeautifulSoup
 import csv
@@ -25,6 +26,8 @@ def scrape_links(soup, output_file='downloaded_data/scraped_links.csv'):
         with open(output_file, 'w', newline='', encoding='utf-8') as file:
             writer = csv.writer(file)
             writer.writerow(['Link Text', 'URL'])
+            for link in links:
+                text = link.get_text().strip() or "No Text"
                 url = link.get('href')
                 writer.writerow([text, url])
     return len(links)

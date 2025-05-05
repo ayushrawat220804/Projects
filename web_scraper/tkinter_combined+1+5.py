@@ -37,6 +37,8 @@ def scrape_images_and_gifs(soup, base_url, images_output_file='downloaded_data/s
     
     if images:
         os.makedirs('downloaded_data', exist_ok=True)  # Ensure folder exists
+        with open(images_output_file, 'w', newline='', encoding='utf-8') as img_file, \
+             open(gifs_output_file, 'w', newline='', encoding='utf-8') as gif_file:
             img_writer = csv.writer(img_file)
             gif_writer = csv.writer(gif_file)
             img_writer.writerow(['Image URL'])
@@ -77,9 +79,6 @@ def scrape_website():
     countdown_label.config(text=f"Countdown: {countdown_time} seconds remaining")
 
     def run_scraping():
-print('Debug output')
-data.append('implementation')
-# This is a comment
         global countdown_time  # Declare countdown_time as global
         try:
             response = requests.get(formatted_url)
@@ -137,7 +136,7 @@ status_label = tk.Label(root, text="", wraplength=400)
 status_label.pack(pady=10)
 
 # Countdown label
-countdown_label = tk.Label(root, text="") // Modified
+countdown_label = tk.Label(root, text="")
 countdown_label.pack(pady=10)
 
 # Open folder button (initially disabled)

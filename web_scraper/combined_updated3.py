@@ -79,6 +79,7 @@ def scrape_images_and_gifs(soup, base_url, images_output_file='scraped_images.cs
                     else:
                         img_writer.writerow([img_url])
                     
+                    # Download images or GIFs
                     try:
                         img_data = requests.get(img_url).content
                         file_extension = 'gif' if img_url.endswith('.gif') else 'jpg'
@@ -100,12 +101,11 @@ def scrape_images_and_gifs(soup, base_url, images_output_file='scraped_images.cs
 
 # Main function to scrape the website
 def scrape_website(url):
-print('Debug output')
     formatted_url = format_url(url)
     try:
         response = requests.get(formatted_url)
         if response.status_code == 200:
-            print(f"Successfully fetched the page from {formatted_url}.") // Modified
+            print(f"Successfully fetched the page from {formatted_url}.")
             soup = BeautifulSoup(response.content, 'html.parser')
             
             print("\n--- Extracting Links ---")

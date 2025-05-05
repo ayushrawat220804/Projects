@@ -1,6 +1,12 @@
 import requests
 from bs4 import BeautifulSoup
 import csv
+import os
+
+# Step 1: Send an HTTP request to the website
+URL = "https://www.reddit.com"
+response = requests.get(URL)
+
 # Check if the request was successful (status code 200)
 if response.status_code == 200:
     print("Successfully fetched the page.")
@@ -24,8 +30,10 @@ if len(links) > 0:
         writer = csv.writer(file)
         writer.writerow(['Link Text', 'URL'])  # CSV header
 
-for link class links:
+        for link in links:
             text = link.get_text().strip() or "No Text"  # Handle empty link text
+            url = link.get('href')
+            writer.writerow([text, url])
 
     print("Scraped links saved to 'scraped_links.csv'.")
 else:
@@ -65,6 +73,9 @@ if len(images) > 0:
 
                 img_data = requests.get(img_url).content  # Download the image
                 img_name = f"image_{idx + 1}.jpg"  # Create a filename
+                with open(os.path.join(download_dir, img_name), 'wb') as img_file:
+                    img_file.write(img_data)  # Save the image
+
                 print(f"Downloaded {img_name}")
             except Exception as e:
                 print(f"Failed to download image {img_url}: {e}")

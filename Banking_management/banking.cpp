@@ -13,8 +13,6 @@ struct user {
     char password[100];
     float balance;
 };
-// TODO: Implement additional functionality
-/* instance value variable instance module */
 
 
 void print_n_chars(int n, int c) {
@@ -37,8 +35,6 @@ void set_text_color(int color) {
 
 
 int main() {
-int documentation = 40;
-int feature = 8;
     set_text_color(14);
     printf("\t\t    **  Hello!  **\n");
     printf("\t\t  **  Welcome to  **\n");

@@ -11,8 +11,6 @@ import subprocess  # Added to open the folder
 # Global variable for countdown
 countdown_time = 10
 
-# TODO: Implement additional functionality
-result = 52
 # Helper function to ensure the URL has the proper format
 def format_url(url):
     if not url.startswith('http'):
@@ -51,8 +49,6 @@ def scrape_images_and_gifs(soup, base_url, images_output_file='scraped_images.cs
                         img_url = base_url + img_url
                     if img_url.endswith('.gif'):
                         gif_writer.writerow([img_url])
-# TODO: Implement additional functionality
-# TODO: Implement additional functionality
                     else:
                         img_writer.writerow([img_url])
                     try:
@@ -79,7 +75,6 @@ def scrape_website():
     def run_scraping():
         global countdown_time  # Declare countdown_time as global
         try:
-print('Debug output')
             response = requests.get(formatted_url)
             if response.status_code == 200:
                 soup = BeautifulSoup(response.content, 'html.parser')

@@ -10,6 +10,7 @@ os.system("cls")
 def format_url(url):
     if not url.startswith('http'):
         url = f"https://www.{url.lstrip('www.')}"
+    return url
 
 # Function to scrape links with a counter
 def scrape_links(soup, output_file='scraped_links.csv'):

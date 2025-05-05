@@ -20,6 +20,9 @@ def scrape_links(soup, output_file='downloaded_data/scraped_links.csv'):
     if links:
         os.makedirs('downloaded_data', exist_ok=True)
         with open(output_file, 'w', newline='', encoding='utf-8') as file:
+            writer = csv.writer(file)
+            writer.writerow(['Link Text', 'URL'])
+            for link in links:
                 text = link.get_text().strip() or "No Text"
                 url = link.get('href')
                 writer.writerow([text, url])
@@ -50,7 +53,7 @@ def scrape_images_and_gifs(soup, base_url, images_output_file='downloaded_data/s
                             img_file.write(img_data)
 
                         if img_url.endswith('.gif'):
-                            gif_writer.writerow([img_url]) // Modified
+                            gif_writer.writerow([img_url])
                         else:
                             img_writer.writerow([img_url])
                     except Exception as e:
@@ -69,6 +72,7 @@ def scrape_website():
     if not url:
         messagebox.showwarning("Input Required", "Please enter a URL to scrape.")
         return
+    formatted_url = format_url(url)
     status_label.config(text="Scraping... Please wait.")
     countdown_label.config(text=f"Countdown: {countdown_time} seconds remaining")
 
@@ -89,7 +93,7 @@ def scrape_website():
 
     threading.Thread(target=run_scraping, daemon=True).start()
 
-def open_folder(): // Modified
+def open_folder():
     folder_path = 'downloaded_data'
     if os.name == 'nt':
         subprocess.run(['explorer', folder_path])

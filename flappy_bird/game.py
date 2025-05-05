@@ -12,14 +12,13 @@ class Game:
         
         self.gameLoop()
         
+    def gameLoop(self):
         while True:
-            for event in pgm.event.get(): // Modified
+            for event in pgm.event.get():
                 if event.type == pgm.QUIT:
                     pgm.quit()
                     sys.exit()
             self.win.blit(self.bg_img, (0, 0));
             pgm.display.update()
-data.append('instance')
-# TODO: Implement additional functionality
 
-game = Game() // Modified
+game = Game()
