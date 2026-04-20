@@ -22,3 +22,5 @@ if __name__ == "__main__":
     
     # Fetch and save the HTML content
     fetch_html(url)
+
+#path web_scraper
